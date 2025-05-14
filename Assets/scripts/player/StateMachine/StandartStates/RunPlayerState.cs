@@ -1,22 +1,21 @@
 using UnityEngine;
 
-public class WalkPlayerState : PlayerBaceState
+public class RunPlayerState : PlayerBaceState
 {
-    public WalkPlayerState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
+    public RunPlayerState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
      :base(context, estate){
         Context = context;
         //InitPerm();
+        transPerm[PlayerStateMachine.EPlayerState.Walk] = true;
         transPerm[PlayerStateMachine.EPlayerState.Idle] = true;
-        transPerm[PlayerStateMachine.EPlayerState.Run] = true;
     }
-    
     public override void EnterState(){
-        Context.Anim.Play("Walk");
-        Debug.Log("Enter WalkState");
+        Context.Anim.Play("Run");
+        Debug.Log("Enter RunState");
         
     }
     public override void ExitState(){
-        Debug.Log("Exit WalkState");
+        Debug.Log("Exit RunState");
     }
     public override void UpdateState(){}
     public override void FixedUpdateState(){
@@ -24,9 +23,9 @@ public class WalkPlayerState : PlayerBaceState
         
 
 
-        Vector3 TargetSpeed = moveDirection.normalized * Context.PlWalkD.moveSpeed;
-        //float accelRateX = (Mathf.Abs(TargetSpeed.x) > 0.01f) ? Context.PlWalkD.acceleration : Context.PlWalkD.deceleration;
-        //float accelRateZ = (Mathf.Abs(TargetSpeed.z) > 0.01f) ? Context.PlWalkD.acceleration : Context.PlWalkD.deceleration;
+        Vector3 TargetSpeed = moveDirection.normalized * Context.PlRunD.moveSpeed;
+        //float accelRateX = (Mathf.Abs(TargetSpeed.x) > 0.01f) ? Context.PlRunD.acceleration : Context.PlRunD.deceleration;
+        //float accelRateZ = (Mathf.Abs(TargetSpeed.z) > 0.01f) ? Context.PlRunD.acceleration : Context.PlRunD.deceleration;
         Vector3 speedDif = TargetSpeed - Context.Rb.linearVelocity;
         Vector3 movement = speedDif.x * 10 * Vector3.right + speedDif.z * 10 * Vector3.forward;
 

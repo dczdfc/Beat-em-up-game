@@ -10,8 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8abd51929bfaadb458b6f2a2cf0c8c79, type: 3}
-  m_Name: playerRunData
+  m_Name: plRunData
   m_EditorClassIdentifier: 
-  moveSpeed: 8
-  acceleration: 4
-  deceleration: 4
+  moveSpeed: 20

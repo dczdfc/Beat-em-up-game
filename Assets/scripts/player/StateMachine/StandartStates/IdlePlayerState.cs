@@ -7,13 +7,14 @@ public class IdlePlayerState : PlayerBaceState
     public IdlePlayerState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
      :base(context, estate){
         Context = context;
-        InitPerm();
-    }
-    private void InitPerm(){
-        transPerm.Add(PlayerStateMachine.EPlayerState.Idle, false);
-        transPerm.Add(PlayerStateMachine.EPlayerState.Walk, true);
+        //InitPerm();
+        transPerm[PlayerStateMachine.EPlayerState.Walk] = true;
+        transPerm[PlayerStateMachine.EPlayerState.Run] = true;
+        transPerm[PlayerStateMachine.EPlayerState.AttackLight] = true;
     }
     public override void EnterState(){
+        Context.Anim.Play("idle");
+        Context.Rb.linearVelocity = Vector3.zero;
         Debug.Log("Enter IdleState");
         
     }
@@ -25,15 +26,5 @@ public class IdlePlayerState : PlayerBaceState
     
     public override PlayerStateMachine.EPlayerState GetNextState(){
         return GetNextStateBace();
-
-        /*if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0){
-            return PlayerStateMachine.EPlayerState.Walk;
-        }
-        else
-        {
-            return StateKey;
-        }*/
-        
-        
     }
 }

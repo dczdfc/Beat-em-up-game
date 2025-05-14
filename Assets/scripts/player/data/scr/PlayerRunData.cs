@@ -4,6 +4,6 @@ using UnityEngine;
 public class PlayerRunData : ScriptableObject
 {
     public float moveSpeed;
-    public float acceleration;
-    public float deceleration;
+    //public float acceleration;
+    //public float deceleration;
 }
