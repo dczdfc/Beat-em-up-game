@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOllapse & Game</title>
+    <link rel="icon" href="C:\Users\murta\source\repos\LogoECOLLAPSE2.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+
+        /* === Стили, общие для всех страниц === */
+                body {
+                        font-family: 'Inter', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #111;
+                        color: #eee;
+                        line-height: 1.7;
+
+        }
+
+                h1, h2, h3 {
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                        color: #64b5f6;
+                        line-height: 1.3;
+                        font-family: 'Press Start 2P', monospace;
+                        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+        }
+
+                h1 {
+                        font-size: 2.5rem;
+                        margin-top: 30px;
+                        text-align: center;
+
+        }
+
+                p {
+                        margin-bottom: 20px;
+                        font-size: 1.1rem;
+                        color: #ddd;
+
+        }
+
+                a {
+                        color: #81c784;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+
+        }
+
+                    a:hover {
+                            color: #4caf50;
+
+        }
+
+
+        /* Стили контейнера */
+                .container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+
+        }
+
+
+        /* Стили секций */
+                section {
+                        padding: 60px 0;
+                        text-align: center;
+
+        }
+
+                    section:nth-child(odd) {
+                            background-color: #1a1a1a;
+
+        }
+
+                    section:nth-child(even) {
+                            background-color: #111;
+
+        }
+
+
+        /* Стили навигации */
+                header {
+                        background-color: #222;
+                        padding: 10px 0;
+                        position: sticky;
+                        top: 0;
+                        z-index: 100;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+                        border-bottom: 1px solid #444;
+
+        }
+
+                nav {
+                        display: flex;
+                        justify-content: center;
+
+        }
+
+                    nav ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+
+        }
+
+                        nav ul li {
+                                margin: 0 15px;
+
+        }
+
+                            nav ul li a {
+                                    color: #eee;
+                                    font-size: 1rem;
+                                    padding: 8px 15px;
+                                    border-radius: 5px;
+                                    transition: background-color 0.3s ease, transform 0.2s ease;
+                                    font-family: 'Press Start 2P', monospace;
+
+        }
+
+                                nav ul li a:hover {
+                                        background-color: #555;
+                                        transform: scale(1.1);
+
+        }
+
+
+        /* === Стили для главной страницы === */
+                #hero {
+                        background-color: #111;
+                        color: #eee;
+                        padding: 100px 0;
+                        background-image: url('hero-bg-game.jpg');
+                        background-size: cover;
+                        background-position: center;
+                        border-bottom: 1px solid #444;
+                        position: relative;
+
+        }
+
+                #hero h1 {
+                        color: #64b5f6;
+                        font-size: 3rem;
+                        margin-bottom: 20px;
+                        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+        }
+
+                #hero p {
+                        font-size: 1.3rem;
+                        max-width: 800px;
+                        margin: 0 auto 30px auto;
+                        margin-bottom: 40px;
+                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+        }
+
+                .features-grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 30px;
+                        margin-top: 30px;
+
+        }
+
+                .feature-item {
+                        text-align: center;
+
+        }
+
+                    .feature-item h3 {
+                            color: #aed581;
+                            font-size: 1.1rem;
+                            margin-bottom: 10px;
+
+        }
+
+                .gallery-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 15px;
+                        margin-top: 30px;
+
+        }
+
+                    .gallery-grid img {
+                            width: 100%;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+        }
+
+
+        /* === Стили футера, общие для всех страниц === */
+                footer {
+                        background-color: #333; /* Измененный фон футера */
+                        text-align: center;
+                        padding: 20px 0;
+                        color: #eee;
+                        border-top: 1px solid #555;
+
+        }
+
+
+        /* === Медиа-запросы для адаптивности === */
+                @media (max-width: 768px) {
+                        nav ul li
+
+        {
+                            margin: 0 10px;
+
+        }
+
+                    #hero h1 {
+                            font-size: 2.5rem;
+
+        }
+
+                    #hero p {
+                            font-size: 1.2rem;
+
+        }
+
+                    .features-grid {
+                            grid-template-columns: 1fr;
+
+        }
+
+                    .gallery-grid {
+                            grid-template-columns: 1fr;
+
+        }
+
+
+        }
+
+                @media (max-width: 480px) {
+                        nav ul
+
+        {
+                            flex-direction: column;
+                            text-align: center;
+
+        }
+
+                        nav ul li {
+                                margin: 10px 0;
+
+        }
+
+                    #hero h1 {
+                            font-size: 2rem;
+
+        }
+
+                    #hero p {
+                            font-size: 1rem;
+
+        }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="team-ecollapse.html">Team ECOllapse</a></li>
+                <li><a href="team-gamedev.html">Team GameDev</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>ECOllapse</h1>
+                <p>
+                    ECOllapse - это многогранный проект, посвященный исследованию и решению экологических проблем,
+                    а также разработке игр. Наша миссия - привлечь внимание к важным экологическим вопросам и
+                    предложить инновационные подходы к их решению. Мы стремимся создать платформу, где наука,
+                    технологии и творчество объединяются для достижения устойчивого будущего.
+                </p>
+                <div class="gallery-grid">
+                    <img src="image1.jpg" alt="Изображение 1">
+                    <img src="image2.jpg" alt="Изображение 2">
+                    <img src="image3.jpg" alt="Изображение 3">
+                    <img src="image4.jpg" alt="Изображение 4">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Исследования</h3>
+                        <p>Глубокие научные изыскания в области экологии.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Разработки</h3>
+                        <p>Инновационные подходы и технологии для решения проблем.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Игры</h3>
+                        <p>Интерактивные игровые проекты, привлекающие внимание к экологии.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 ECOllapse & Game. Все права защищены.</p>
+    </footer>
+</body>
+</html>
