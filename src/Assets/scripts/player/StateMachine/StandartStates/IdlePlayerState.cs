@@ -5,12 +5,14 @@ using System.Collections.Generic;
 public class IdlePlayerState : PlayerBaceState
 {
     public IdlePlayerState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
-     :base(context, estate){
+     : base(context, estate)
+    {
         Context = context;
         //InitPerm();
         transPerm[PlayerStateMachine.EPlayerState.Walk] = true;
         transPerm[PlayerStateMachine.EPlayerState.Run] = true;
         transPerm[PlayerStateMachine.EPlayerState.AttackLight] = true;
+        
     }
     public override void EnterState(){
         Context.Anim.Play("idle");

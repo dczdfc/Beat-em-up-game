@@ -20,7 +20,9 @@ public class RunPlayerState : PlayerBaceState
     public override void UpdateState(){}
     public override void FixedUpdateState(){
         Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"));
-        
+        // куда смотрим?
+        if (moveDirection.x > 0) FlipCharR();
+        else if (moveDirection.x < 0) FlipCharL();
 
 
         Vector3 TargetSpeed = moveDirection.normalized * Context.PlRunD.moveSpeed;

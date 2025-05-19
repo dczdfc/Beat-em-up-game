@@ -3,11 +3,13 @@ using UnityEngine;
 public class WalkPlayerState : PlayerBaceState
 {
     public WalkPlayerState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
-     :base(context, estate){
+     : base(context, estate)
+    {
         Context = context;
         //InitPerm();
         transPerm[PlayerStateMachine.EPlayerState.Idle] = true;
         transPerm[PlayerStateMachine.EPlayerState.Run] = true;
+        transPerm[PlayerStateMachine.EPlayerState.AttackLight] = true;
     }
     
     public override void EnterState(){
@@ -21,6 +23,9 @@ public class WalkPlayerState : PlayerBaceState
     public override void UpdateState(){}
     public override void FixedUpdateState(){
         Vector3 moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"));
+        // куда смотрим?
+        if (moveDirection.x > 0) FlipCharR();
+        else if (moveDirection.x < 0) FlipCharL();
         
 
 
