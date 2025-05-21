@@ -4,11 +4,13 @@ public class PlayerAttackLite1State : PlayerBaceState
 {
     private bool isEnded = false;
     public PlayerAttackLite1State(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
-     :base(context, estate){
+     : base(context, estate)
+    {
         Context = context;
         transPerm[PlayerStateMachine.EPlayerState.Walk] = true;
         transPerm[PlayerStateMachine.EPlayerState.Run] = true;
         transPerm[PlayerStateMachine.EPlayerState.Idle] = true;
+        transPerm[PlayerStateMachine.EPlayerState.AttackHeavy] = true;
     }
     public override void EnterState(){
         Context.Anim.Play("Attack");
@@ -21,7 +23,12 @@ public class PlayerAttackLite1State : PlayerBaceState
         Debug.Log("Exit AttackLite1State");
         isEnded = false;
     }
-    public override void UpdateState(){}
+    public override void AnimationEvent()
+    {
+        Debug.Log("attackLiteEvent");
+        OverlapDamageArea(Context.At1Lite, Context.AtAreaLite1);
+    }
+    public override void UpdateState() { }
     public override void FixedUpdateState(){
         if (Context.Anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
         {

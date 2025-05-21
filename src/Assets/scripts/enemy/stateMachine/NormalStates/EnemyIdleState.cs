@@ -8,13 +8,16 @@ public class EnemyIdleState : EnemyBaceState
         Context = context;
         //InitPerm();
         transPerm[EnemyStateMachine.EEnemyState.Hitten] = true;
+        transPerm[EnemyStateMachine.EEnemyState.Walk] = true;
+        transPerm[EnemyStateMachine.EEnemyState.AttackLight] = true;
         
         
     }
     public override void EnterState(){
-        Context.Anim.Play("Idle");
+        
         Context.Rb.linearVelocity = Vector3.zero;
         Debug.Log("Enter EnemyIdleState");
+        Context.Anim.Play("Idle");
         
     }
     public override void ExitState(){
@@ -24,6 +27,6 @@ public class EnemyIdleState : EnemyBaceState
     public override void FixedUpdateState(){}
     
     public override EnemyStateMachine.EEnemyState GetNextState(){
-        return StateKey;
+        return GetNextStateBace();
     }
 }

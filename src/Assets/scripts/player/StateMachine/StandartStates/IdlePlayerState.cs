@@ -12,6 +12,7 @@ public class IdlePlayerState : PlayerBaceState
         transPerm[PlayerStateMachine.EPlayerState.Walk] = true;
         transPerm[PlayerStateMachine.EPlayerState.Run] = true;
         transPerm[PlayerStateMachine.EPlayerState.AttackLight] = true;
+        transPerm[PlayerStateMachine.EPlayerState.AttackHeavy] = true;
         
     }
     public override void EnterState(){

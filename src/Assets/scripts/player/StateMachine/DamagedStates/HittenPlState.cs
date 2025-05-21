@@ -12,6 +12,7 @@ public class HittenPlState : PlayerBaceState
         transPerm[PlayerStateMachine.EPlayerState.Run] = true;
         transPerm[PlayerStateMachine.EPlayerState.Idle] = true;
         transPerm[PlayerStateMachine.EPlayerState.AttackLight] = true;
+        transPerm[PlayerStateMachine.EPlayerState.AttackHeavy] = true;
     }
     public override void EnterState(){
         Context.Anim.Play("Hitten");

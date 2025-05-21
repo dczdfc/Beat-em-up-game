@@ -7,7 +7,7 @@ using System;
 public abstract class PlayerBaceState : BaceState<PlayerStateMachine.EPlayerState>
 {
     protected PlayerStContext Context;
-    protected Dictionary<PlayerStateMachine.EPlayerState, bool> transPerm = new Dictionary<PlayerStateMachine.EPlayerState, bool>();
+    public Dictionary<PlayerStateMachine.EPlayerState, bool> transPerm = new Dictionary<PlayerStateMachine.EPlayerState, bool>();
     public PlayerBaceState(PlayerStContext context, PlayerStateMachine.EPlayerState stateKey) : base(stateKey)
     {
         Context = context;
@@ -22,6 +22,25 @@ public abstract class PlayerBaceState : BaceState<PlayerStateMachine.EPlayerStat
         transPerm.Add(PlayerStateMachine.EPlayerState.AttackHeavy, false);
         transPerm.Add(PlayerStateMachine.EPlayerState.Hitten, true);
         transPerm.Add(PlayerStateMachine.EPlayerState.Die, false);
+    }
+    public void OverlapDamageArea(PlayerAttackData AttackData, BoxCollider refferBox){
+        Vector3 World = refferBox.transform.TransformPoint(refferBox.center);
+        Debug.Log(World);
+
+        Vector3 Scale = refferBox.size /2;
+
+        Collider[] hitColliders = Physics.OverlapBox(World,
+         Scale,Quaternion.identity, AttackData.enemyMask);
+
+        foreach (Collider enemy in hitColliders)
+        {
+            Debug.Log("found!!");
+            HelthManager hethMan = enemy.GetComponent<HelthManager>();
+            if (hethMan != null)
+            {
+                hethMan.TakeDamage(AttackData, Context.Rb.position);
+            }
+        }
     }
     public void FlipChar()
     {
@@ -60,9 +79,12 @@ public abstract class PlayerBaceState : BaceState<PlayerStateMachine.EPlayerStat
         return StateKey;*/
 
 
-        if (!Input.GetButton("Fire3") && Input.GetButton("Jump"))
+        if (!Input.GetButton("Fire3") && Input.GetButton("Fire1"))
         {
             return PermCheck(PlayerStateMachine.EPlayerState.AttackLight);
+        }else if (!Input.GetButton("Fire3") && Input.GetButton("Fire2"))
+        {
+            return PermCheck(PlayerStateMachine.EPlayerState.AttackHeavy);
         }
         else if (!Input.GetButton("Fire3") && (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
         {

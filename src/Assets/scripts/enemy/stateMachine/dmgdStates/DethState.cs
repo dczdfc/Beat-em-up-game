@@ -1,27 +1,29 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-public class EnemyHittenState : EnemyBaceState
+public class DethState : EnemyBaceState
 {
     private bool isEnded = false;
-    public EnemyHittenState(EnemyStContext context, EnemyStateMachine.EEnemyState estate)
+    public DethState(EnemyStContext context, EnemyStateMachine.EEnemyState estate)
      : base(context, estate)
     {
         Context = context;
-        transPerm[EnemyStateMachine.EEnemyState.Idle] = true;
+        //InitPerm();
+
+
 
     }
     public override void EnterState(){
-        Context.Anim.Play("Hitten");
-        Context.Rb.linearVelocity = Vector3.zero;
-        Debug.Log("Enter EnemyHittenState");
+        Vector3 ForceVect = -Context.hitData.HitVector * Context.hitData.Power;
+        if (ForceVect.x > 0) FlipCharL();
+        else if(ForceVect.x < 0) FlipCharR();
         
+        Context.Rb.linearVelocity = Vector3.zero;
+        Debug.Log("Enter DethState");
+        Context.Anim.Play("Deth");
         
     }
     public override void ExitState(){
-        Debug.Log("Exit EnemyHittenState");
-        isEnded = false;
+        Debug.Log("Exit DethState");
     }
     public override void UpdateState(){}
     public override void FixedUpdateState(){
@@ -35,7 +37,7 @@ public class EnemyHittenState : EnemyBaceState
     public override EnemyStateMachine.EEnemyState GetNextState(){
         if (isEnded)
         {
-            return PermCheck(EnemyStateMachine.EEnemyState.Idle);
+            Context.DieEvent.Invoke();
         }return StateKey;
         
     }
