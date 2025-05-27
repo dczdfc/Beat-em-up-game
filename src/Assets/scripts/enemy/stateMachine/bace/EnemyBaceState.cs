@@ -65,14 +65,14 @@ public abstract class EnemyBaceState : BaceState<EnemyStateMachine.EEnemyState>
     }
     public EnemyStateMachine.EEnemyState GetNextStateBace()
     {
-        if (Context.enemyWalkTrail.targetPos != Vector3.zero)
+        if ((Context.enemyWalkTrail.targetPos - Context.Rb.position).magnitude > 0.1f)
         {
             return PermCheck(EnemyStateMachine.EEnemyState.Walk);
         }else
         {
             return PermCheck(EnemyStateMachine.EEnemyState.Idle);
         }
-        return StateKey;
+        
     }
     
 }

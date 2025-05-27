@@ -4,24 +4,21 @@ public class Spowner : MonoBehaviour
 {
     public GameObject spObj;
     public Transform[] spPoins;
-    public float Delay;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float MaxTime = 3f;
+    float CurTime = 3f;
+    public void FixedUpdate()
     {
-        StartCoroutine(Spown());
-    }
-    IEnumerator Spown() 
-    {
-        float buff = 0f;
-        while (true)
+        CurTime -= Time.fixedDeltaTime;
+        if (CurTime <= 0)
         {
-            int spPNow = Random.Range(0, spPoins.Length);
-            Instantiate(spObj, spPoins[spPNow].position, Quaternion.identity);
-
-            yield return new WaitForSeconds(Delay);
+            Spown();
+            CurTime = MaxTime;
         }
-        
-        
+    }
+    public void Spown()
+    {
+        int spPNow = Random.Range(0, spPoins.Length);
+        Instantiate(spObj, spPoins[spPNow].position, Quaternion.identity);
     }
     
 }

@@ -30,7 +30,9 @@ public class PlayerAttackLite1State : PlayerBaceState
     }
     public override void UpdateState() { }
     public override void FixedUpdateState(){
-        if (Context.Anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
+        AnimatorStateInfo stateInfo = Context.Anim.GetCurrentAnimatorStateInfo(0);
+        
+        if (stateInfo.normalizedTime >= 0.99 && stateInfo.IsName("Attack") )
         {
             isEnded = true;
         }

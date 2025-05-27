@@ -52,11 +52,20 @@ public class EnemyStateMachine : StateManager<EnemyStateMachine.EEnemyState>, ID
     public void TakeDamage(hittenData hitDat)
     {
         _context.hitData = hitDat;
-        TransitionToState(EEnemyState.Hitten);
+        TransToSt(EEnemyState.Hitten);
+    }
+    public void TransToSt(EnemyStateMachine.EEnemyState eState)
+    {
+        EnemyBaceState curst = (EnemyBaceState)CurrentState;
+        if (curst.transPerm[eState])
+        {
+            TransitionToState(eState);
+        }
+        
     }
     public void Attack()
     {
-        TransitionToState(EEnemyState.AttackLight);
+        TransToSt(EEnemyState.AttackLight);
     }
     public bool tryToHit()
     {
@@ -70,7 +79,8 @@ public class EnemyStateMachine : StateManager<EnemyStateMachine.EEnemyState>, ID
     public void Die(hittenData hitDat)
     {
         _context.hitData = hitDat;
-        TransitionToState(EEnemyState.Die);
+        TransToSt(EEnemyState.Die);
+        
     }
     public void RealDie()
     {

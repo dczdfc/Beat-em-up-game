@@ -28,8 +28,12 @@ public class PlayerAttackHeavy : PlayerBaceState
         OverlapDamageArea(Context.AtHeavy, Context.AtAreaHeavy);
     }
     public override void UpdateState() { }
-    public override void FixedUpdateState(){
-        if (Context.Anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
+    public override void FixedUpdateState()
+    {
+        
+        AnimatorStateInfo stateInfo = Context.Anim.GetCurrentAnimatorStateInfo(0);
+        
+        if (stateInfo.normalizedTime >= 0.99 && stateInfo.IsName("SAttack") )
         {
             isEnded = true;
         }

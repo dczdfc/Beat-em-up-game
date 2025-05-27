@@ -1,33 +1,41 @@
 using UnityEngine;
 using System.Collections;
 
-public class MiniBrains : MonoBehaviour
+public class MiniBrains : StateManager<MiniBrains.EBrainStates>
 {
-    public EnemyWalkTrail walkTrail = new EnemyWalkTrail();
-    public EnemyStateMachine enemyStateMachine;
-    public PlayerFounder plFounder;
-    public Transform playerPos;
-    public EBrainStates eBrainState = EBrainStates.Wandering;
     public enum EBrainStates
     {
         Wandering,
         ChasePlayer,
         hitPlayer
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        StartCoroutine(RandThings());
+    public EnemyWalkTrail walkTrail = new EnemyWalkTrail();
+    public EnemyStateMachine enemyStateMachine;
+    public PlayerFounder plFounder;
+    public Transform playerPos;
 
+    private EnBrainContext _context;
+
+
+    public void Awake()
+    {
+        _context = new EnBrainContext(enemyStateMachine, walkTrail, plFounder, playerPos, transform);
+
+        InitializeStates();
+    }
+    private void InitializeStates()
+    {
+        States.Add(EBrainStates.Wandering, new WonderingEnState(_context, EBrainStates.Wandering));
+        States.Add(EBrainStates.ChasePlayer, new ChasingEnSt(_context, EBrainStates.ChasePlayer));
+        States.Add(EBrainStates.hitPlayer, new HitEnSt(_context, EBrainStates.hitPlayer));
+        
+
+
+
+        CurrentState = States[EBrainStates.Wandering];
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    IEnumerator RandThings() 
+    /*IEnumerator RandThings() 
     {
         float buff = 0f;
         while (true)
@@ -63,6 +71,7 @@ public class MiniBrains : MonoBehaviour
             }
             if (eBrainState == EBrainStates.ChasePlayer)
             {
+                buff = -2f;
                 int WeLeft = Random.Range(0, 2);
 
                 if (WeLeft == 0)
@@ -84,5 +93,5 @@ public class MiniBrains : MonoBehaviour
         }
         
         
-    }
+    }*/
 }

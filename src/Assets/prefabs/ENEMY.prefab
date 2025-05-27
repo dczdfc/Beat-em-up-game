@@ -557,7 +557,7 @@ MonoBehaviour:
   groundChecker: {fileID: 2419856488367648448}
   enemyWalkData: {fileID: 11400000, guid: 685d1d3da914fd84ebbbe179628b2f0e, type: 2}
   brains: {fileID: 3737753010165349902}
-  attackLite: {fileID: 11400000, guid: e201486c5c13fe74aa9f6ba31d6fc36a, type: 2}
+  attackLite: {fileID: 11400000, guid: 71a32be1cd16c6f4ebc1f67fd78ac642, type: 2}
   attackLiteArea: {fileID: 8216493969408930520}
 --- !u!54 &5789431835124287954
 Rigidbody:

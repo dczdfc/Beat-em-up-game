@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class DethState : EnemyBaceState
+public class DethPlState : PlayerBaceState
 {
-    public DethState(EnemyStContext context, EnemyStateMachine.EEnemyState estate)
+    private bool isEnded = false;
+    public DethPlState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
      : base(context, estate)
     {
         Context = context;
@@ -18,7 +19,7 @@ public class DethState : EnemyBaceState
         
         Context.Rb.linearVelocity = Vector3.zero;
         Debug.Log("Enter DethState");
-        Context.Anim.Play("Deth");
+        Context.Anim.Play("deth");
         
     }
     public override void ExitState(){
@@ -29,16 +30,18 @@ public class DethState : EnemyBaceState
     {
         AnimatorStateInfo stateInfo = Context.Anim.GetCurrentAnimatorStateInfo(0);
         
-        if (stateInfo.normalizedTime >= 0.9 && stateInfo.IsName("Deth") )
+        if (stateInfo.normalizedTime >= 0.9 && stateInfo.IsName("deth") )
         {
-            
-            Context.DieEvent.Invoke();
+            isEnded = true;
         }
     }
     
     
-    public override EnemyStateMachine.EEnemyState GetNextState(){
-        return StateKey;
+    public override PlayerStateMachine.EPlayerState GetNextState(){
+        if (isEnded)
+        {
+            Context.DieEvent.Invoke();
+        }return StateKey;
         
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerStContext
 {
@@ -14,10 +15,10 @@ public class PlayerStContext
     private PlayerAttackData _attack1Lite;
     private BoxCollider _attackHeavyArea;
     private PlayerAttackData _attackHeavy;
-    private hittenData _hitDat;
+    private GroundCheck _groundChecker;
     public PlayerStContext(Rigidbody rigidbody, Animator anim, PlayerRunData playerWalkData, PlayerRunData playerRunData,
     Transform attackHitBoxes, SpriteRenderer spriteRenderer, BoxCollider AttackLite1Area, PlayerAttackData attack1Lite,
-    PlayerAttackData attackHeavy, BoxCollider AttackHeavyArea)
+    PlayerAttackData attackHeavy, BoxCollider AttackHeavyArea, GroundCheck groundChecker)
     {
         _rigidbody = rigidbody;
         _animator = anim;
@@ -29,6 +30,7 @@ public class PlayerStContext
         _attack1Lite = attack1Lite;
         _attackHeavy = attackHeavy;
         _attackHeavyArea = AttackHeavyArea;
+        _groundChecker = groundChecker;
     }
 
     public Rigidbody Rb => _rigidbody;
@@ -40,7 +42,10 @@ public class PlayerStContext
     public SpriteRenderer SprRend => _spriteRenderer;
     public Transform AtHitBxs => _attackHitBoxes;
     public Animator Anim => _animator;
-    public hittenData hitData => _hitDat;
+    public GroundCheck GrChecker => _groundChecker;
+    public hittenData hitData;
+
     public PlayerRunData PlWalkD => _plWalkData;
     public PlayerRunData PlRunD => _plRunData;
+    public UnityEvent DieEvent = new UnityEvent();
 }

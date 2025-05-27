@@ -15,9 +15,9 @@ public class EnemyAttackLiteState : EnemyBaceState
 
     }
     public override void EnterState(){
-        Vector3 moveDirection = Context.minBr.playerPos.position - Context.Rb.position;
+        /*Vector3 moveDirection = Context.minBr.playerPos.position - Context.Rb.position;
         if (moveDirection.x > 0) FlipCharR();
-        else if (moveDirection.x < 0) FlipCharL();
+        else if (moveDirection.x < 0) FlipCharL();*/
         
         Context.Rb.linearVelocity = Vector3.zero;
         Debug.Log("Enter EnemyAttackLiteState");
@@ -31,7 +31,9 @@ public class EnemyAttackLiteState : EnemyBaceState
     }
     public override void UpdateState(){}
     public override void FixedUpdateState(){
-        if (Context.Anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
+        AnimatorStateInfo stateInfo = Context.Anim.GetCurrentAnimatorStateInfo(0);
+        
+        if (stateInfo.normalizedTime >= 0.99 && stateInfo.IsName("Attack"))
         {
             isEnded = true;
         }
