@@ -14,7 +14,7 @@ public class HitEnSt: BraunBaceState
 
     }
     public override void EnterState(){
-        
+        Context.EnStMach.Attack();
         Context.walkTrail.targetPos = Context.myPos.position;
         
         
@@ -24,7 +24,10 @@ public class HitEnSt: BraunBaceState
         currentTime = MaxTime;
         Isend = false;
     }
-    public override void UpdateState(){}
+    public override void UpdateState()
+    {
+        
+    }
     public override void FixedUpdateState()
     {
         currentTime -= Time.fixedDeltaTime;

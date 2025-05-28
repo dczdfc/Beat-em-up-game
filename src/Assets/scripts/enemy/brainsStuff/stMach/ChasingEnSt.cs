@@ -14,7 +14,7 @@ public class ChasingEnSt : BraunBaceState
     {
 
         Context.walkTrail.targetPos = Context.playerPoss.position;
-        Context.EnStMach.Attack();
+        
         
     }
     public override void ExitState(){
