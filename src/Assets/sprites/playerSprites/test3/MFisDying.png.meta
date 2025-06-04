@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: 20a174f16170959428481f6ffd97a8f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3116987487589337251
+    second: MFisDying_0
+  - first:
+      213: -3058735242365557574
+    second: MFisDying_1
+  - first:
+      213: 1715307950323910847
+    second: MFisDying_2
+  - first:
+      213: -3698468112630440262
+    second: MFisDying_3
+  - first:
+      213: -1063421029567620017
+    second: MFisDying_4
+  - first:
+      213: -5852487206614885753
+    second: MFisDying_5
+  - first:
+      213: 6835982677012469032
+    second: MFisDying_6
+  - first:
+      213: 205739290086777251
+    second: MFisDying_7
+  - first:
+      213: 5172157860623838781
+    second: MFisDying_8
+  - first:
+      213: 6487321927600613706
+    second: MFisDying_9
+  - first:
+      213: 4653938254050465476
+    second: MFisDying_10
+  - first:
+      213: 2464011220789285567
+    second: MFisDying_11
+  - first:
+      213: -8410955950046504324
+    second: MFisDying_12
+  - first:
+      213: -8615591025116403163
+    second: MFisDying_13
+  - first:
+      213: -381044977288185967
+    second: MFisDying_14
+  - first:
+      213: -320861377631836601
+    second: MFisDying_15
+  - first:
+      213: 549785604894721992
+    second: MFisDying_16
+  - first:
+      213: 2661262267485120046
+    second: MFisDying_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MFisDying_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8891ffa93c14b20800000000000000
+      internalID: 3116987487589337251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_1
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab425d0c0803d85d0800000000000000
+      internalID: -3058735242365557574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_2
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8c5732e7ffdc710800000000000000
+      internalID: 1715307950323910847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_3
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe9d8dc8d66cacc0800000000000000
+      internalID: -3698468112630440262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c11f53538fd31f0800000000000000
+      internalID: -1063421029567620017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_5
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a9335b4e9c7cea0800000000000000
+      internalID: -5852487206614885753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_6
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8255d02b60a4ede50800000000000000
+      internalID: 6835982677012469032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_7
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1a6f55bceead200800000000000000
+      internalID: 205739290086777251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e6ab4cb2237c740800000000000000
+      internalID: 5172157860623838781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_9
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49ac3efbe8970a50800000000000000
+      internalID: 6487321927600613706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MFisDying_10
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 0
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c697473f2c169040800000000000000
+      internalID: 4653938254050465476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5774803ba0d23b04a87782f415788912
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MFisDying_0: 3116987487589337251
+      MFisDying_1: -3058735242365557574
+      MFisDying_10: 4653938254050465476
+      MFisDying_2: 1715307950323910847
+      MFisDying_3: -3698468112630440262
+      MFisDying_4: -1063421029567620017
+      MFisDying_5: -5852487206614885753
+      MFisDying_6: 6835982677012469032
+      MFisDying_7: 205739290086777251
+      MFisDying_8: 5172157860623838781
+      MFisDying_9: 6487321927600613706
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

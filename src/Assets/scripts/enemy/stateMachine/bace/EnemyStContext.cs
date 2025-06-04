@@ -14,11 +14,12 @@ public class EnemyStContext
     private MiniBrains _miniBrains;
     private PlayerAttackData _attackLite;
     private BoxCollider _attackLiteArea;
+    private BasicSoundTest _bsSounTest;
 
 
     public EnemyStContext(Rigidbody rigidbody, Animator anim, Transform attackHitBoxes, SpriteRenderer spriteRenderer,
     GroundCheck groundChecker, PlayerRunData enemyWalkData, EnemyWalkTrail eenemyWalkTrail, MiniBrains miniBrains,
-    PlayerAttackData attackLite, BoxCollider attackLiteArea)
+    PlayerAttackData attackLite, BoxCollider attackLiteArea, BasicSoundTest basicSoundTest)
     {
         _rigidbody = rigidbody;
         _animator = anim;
@@ -30,12 +31,14 @@ public class EnemyStContext
         _attackLite = attackLite;
         _attackLiteArea = attackLiteArea;
         enemyWalkTrail = eenemyWalkTrail;
+        _bsSounTest = basicSoundTest;
 
     }
 
     public PlayerAttackData AtLite => _attackLite;
     public BoxCollider AtAreaLite => _attackLiteArea;
     public Rigidbody Rb => _rigidbody;
+    public BasicSoundTest bST => _bsSounTest;
     public MiniBrains minBr => _miniBrains;
     public GroundCheck GrChecker => _groundChecker;
 

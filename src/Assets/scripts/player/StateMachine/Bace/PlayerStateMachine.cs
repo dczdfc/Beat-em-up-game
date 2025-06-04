@@ -27,12 +27,15 @@ public class PlayerStateMachine : StateManager<PlayerStateMachine.EPlayerState>,
     [SerializeField] private PlayerAttackData AttackHeavy;
     [SerializeField] private BoxCollider attackHeavyArea;
     [SerializeField] private GroundCheck groundChecker;
+    [SerializeField] private BasicSoundTest basicSoundTest;
+    
+    public GameObject DiePanel;
 
     public void Awake()
     {
         hm.MyDamagable = this;
         _context = new PlayerStContext(RB, animator, WalkData, RunData, AttackHitBoxes, spRend,
-         attackLite1Area, AttackLite1, AttackHeavy, attackHeavyArea, groundChecker);
+         attackLite1Area, AttackLite1, AttackHeavy, attackHeavyArea, groundChecker, basicSoundTest);
         _context.DieEvent.AddListener(RealDie);
         InitializeStates();
     }
@@ -79,6 +82,8 @@ public class PlayerStateMachine : StateManager<PlayerStateMachine.EPlayerState>,
     }
     public void RealDie()
     {
+        DiePanel.SetActive(true);
+        CillStrick.instance.Deackivate();
         Destroy(gameObject);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyStateMachine : StateManager<EnemyStateMachine.EEnemyState>, IDamagable
 {
@@ -21,13 +22,16 @@ public class EnemyStateMachine : StateManager<EnemyStateMachine.EEnemyState>, ID
     [SerializeField] private MiniBrains brains;
     [SerializeField] private PlayerAttackData attackLite;
     [SerializeField] private BoxCollider attackLiteArea;
+    [SerializeField] private BasicSoundTest basicSoundTest;
+    
+    public UnityEvent DestroyEvent = new UnityEvent();
 
 
     public void Awake()
     {
         hm.MyDamagable = this;
         _context = new EnemyStContext(RB, animator, AttackHitBoxes, spRend, groundChecker, enemyWalkData, brains.walkTrail,
-         brains, attackLite, attackLiteArea);
+         brains, attackLite, attackLiteArea, basicSoundTest);
         _context.DieEvent.AddListener(RealDie);
         InitializeStates();
     }
@@ -81,9 +85,12 @@ public class EnemyStateMachine : StateManager<EnemyStateMachine.EEnemyState>, ID
         _context.hitData = hitDat;
         TransToSt(EEnemyState.Die);
         
+        
     }
     public void RealDie()
     {
+        DestroyEvent.Invoke();
+        CillStrick.instance.AddKill();
         Destroy(gameObject);
     }
 }

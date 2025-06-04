@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 438519ca4f5223843a74a65715bb83c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5224443701892057150
+    second: ZomDEATH_0
+  - first:
+      213: 8690948786534901692
+    second: ZomDEATH_1
+  - first:
+      213: -7351088168490035832
+    second: ZomDEATH_2
+  - first:
+      213: -1729181675479870328
+    second: ZomDEATH_3
+  - first:
+      213: 8764214145720950524
+    second: ZomDEATH_4
+  - first:
+      213: 6911315250824400844
+    second: ZomDEATH_5
+  - first:
+      213: -3696517140899594590
+    second: ZomDEATH_6
+  - first:
+      213: -5813576976702023558
+    second: ZomDEATH_7
+  - first:
+      213: -1643256619734478563
+    second: ZomDEATH_8
+  - first:
+      213: 2110025400206959602
+    second: ZomDEATH_9
+  - first:
+      213: -661201468748040563
+    second: ZomDEATH_10
+  - first:
+      213: 1614549574322933650
+    second: ZomDEATH_11
+  - first:
+      213: -1352087033936813871
+    second: ZomDEATH_12
+  - first:
+      213: 3946586811057827834
+    second: ZomDEATH_13
+  - first:
+      213: -561888705072554892
+    second: ZomDEATH_14
+  - first:
+      213: 2107074394445672312
+    second: ZomDEATH_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ZomDEATH_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1680
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e388d48ddd3f08840800000000000000
+      internalID: 5224443701892057150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_1
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1680
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7668eefd37c9870800000000000000
+      internalID: 8690948786534901692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_2
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1680
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 885139c2240bbf990800000000000000
+      internalID: -7351088168490035832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_3
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 1680
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88458e08d66b008e0800000000000000
+      internalID: -1729181675479870328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe962ba45eb0a970800000000000000
+      internalID: 8764214145720950524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_5
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccfc0285a9ce9ef50800000000000000
+      internalID: 6911315250824400844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_6
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae798ece3553bcc0800000000000000
+      internalID: -3696517140899594590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_7
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 1120
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7859459a86025fa0800000000000000
+      internalID: -5813576976702023558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11dae98fcaf139e0800000000000000
+      internalID: -1643256619734478563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_9
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3236e0ce0584d10800000000000000
+      internalID: 2110025400206959602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_10
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d867e4274c0f2d6f0800000000000000
+      internalID: -661201468748040563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_11
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 560
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fc6c99848086610800000000000000
+      internalID: 1614549574322933650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0e8cc910c6c3de0800000000000000
+      internalID: -1352087033936813871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZomDEATH_13
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 756
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affe7547bc715c630800000000000000
+      internalID: 3946586811057827834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 78a9e77d257c630488b62b9ad55e816f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ZomDEATH_0: 5224443701892057150
+      ZomDEATH_1: 8690948786534901692
+      ZomDEATH_10: -661201468748040563
+      ZomDEATH_11: 1614549574322933650
+      ZomDEATH_12: -1352087033936813871
+      ZomDEATH_13: 3946586811057827834
+      ZomDEATH_2: -7351088168490035832
+      ZomDEATH_3: -1729181675479870328
+      ZomDEATH_4: 8764214145720950524
+      ZomDEATH_5: 6911315250824400844
+      ZomDEATH_6: -3696517140899594590
+      ZomDEATH_7: -5813576976702023558
+      ZomDEATH_8: -1643256619734478563
+      ZomDEATH_9: 2110025400206959602
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

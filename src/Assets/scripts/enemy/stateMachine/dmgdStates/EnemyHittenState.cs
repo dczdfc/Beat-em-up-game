@@ -24,6 +24,7 @@ public class EnemyHittenState : EnemyBaceState
         //Context.Rb.linearVelocity = Vector3.zero;
         
         Vector3 htVect = -Context.hitData.HitVector;
+        AudioManager.instance.PlaySoundFXClip(Context.bST.Hitten, Context.Rb.position, 0.2f);
         if (Context.hitData.AngPower > 0)
         {
             htVect.y += Context.hitData.AngPower;

@@ -16,9 +16,10 @@ public class PlayerStContext
     private BoxCollider _attackHeavyArea;
     private PlayerAttackData _attackHeavy;
     private GroundCheck _groundChecker;
+    private BasicSoundTest _bsSounTest;
     public PlayerStContext(Rigidbody rigidbody, Animator anim, PlayerRunData playerWalkData, PlayerRunData playerRunData,
     Transform attackHitBoxes, SpriteRenderer spriteRenderer, BoxCollider AttackLite1Area, PlayerAttackData attack1Lite,
-    PlayerAttackData attackHeavy, BoxCollider AttackHeavyArea, GroundCheck groundChecker)
+    PlayerAttackData attackHeavy, BoxCollider AttackHeavyArea, GroundCheck groundChecker, BasicSoundTest basicSoundTest)
     {
         _rigidbody = rigidbody;
         _animator = anim;
@@ -31,9 +32,11 @@ public class PlayerStContext
         _attackHeavy = attackHeavy;
         _attackHeavyArea = AttackHeavyArea;
         _groundChecker = groundChecker;
+        _bsSounTest = basicSoundTest;
     }
 
     public Rigidbody Rb => _rigidbody;
+    public BasicSoundTest bST => _bsSounTest;
     public PlayerAttackData At1Lite => _attack1Lite;
     public BoxCollider AtAreaLite1 => _attackLite1Area;
 

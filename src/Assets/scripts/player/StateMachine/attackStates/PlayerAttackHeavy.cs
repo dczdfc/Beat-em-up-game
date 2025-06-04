@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAttackHeavy : PlayerBaceState
 {
-    private bool isEnded = false;
+    
     public PlayerAttackHeavy(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
      : base(context, estate)
     {
@@ -11,17 +11,19 @@ public class PlayerAttackHeavy : PlayerBaceState
         transPerm[PlayerStateMachine.EPlayerState.Run] = true;
         transPerm[PlayerStateMachine.EPlayerState.Idle] = true;
         transPerm[PlayerStateMachine.EPlayerState.AttackLight] = true;
+        Ended = false;
     }
     public override void EnterState(){
         Context.Anim.Play("SAttack");
+        AudioManager.instance.PlaySoundFXClip(Context.bST.Attack2, Context.Rb.position, 0.1f);
         Context.Rb.linearVelocity = Vector3.zero;
-        Debug.Log("Enter PlayerAttackHeavy");
+        //Debug.Log("Enter PlayerAttackHeavy");
         
         
     }
     public override void ExitState(){
-        Debug.Log("Exit PlayerAttackHeavy");
-        isEnded = false;
+        //Debug.Log("Exit PlayerAttackHeavy");
+        Ended = false;
     }
     public override void AnimationEvent()
     {
@@ -35,16 +37,12 @@ public class PlayerAttackHeavy : PlayerBaceState
         
         if (stateInfo.normalizedTime >= 0.99 && stateInfo.IsName("SAttack") )
         {
-            isEnded = true;
+            Ended = true;
         }
     }
     
     
     public override PlayerStateMachine.EPlayerState GetNextState(){
-        if (isEnded)
-        {
-            return GetNextStateBace();
-        }return StateKey;
-        
+        return GetNextStateBace();
     }
 }

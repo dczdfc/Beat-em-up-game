@@ -18,11 +18,11 @@ public class IdlePlayerState : PlayerBaceState
     public override void EnterState(){
         Context.Anim.Play("idle");
         Context.Rb.linearVelocity = Vector3.zero;
-        Debug.Log("Enter IdleState");
+        //Debug.Log("Enter IdleState");
         
     }
     public override void ExitState(){
-        Debug.Log("Exit IdleState");
+        //Debug.Log("Exit IdleState");
     }
     public override void UpdateState(){}
     public override void FixedUpdateState(){}

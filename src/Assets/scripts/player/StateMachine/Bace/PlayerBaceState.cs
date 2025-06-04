@@ -7,11 +7,14 @@ using System;
 public abstract class PlayerBaceState : BaceState<PlayerStateMachine.EPlayerState>
 {
     protected PlayerStContext Context;
+    protected bool Ended = true;
     public Dictionary<PlayerStateMachine.EPlayerState, bool> transPerm = new Dictionary<PlayerStateMachine.EPlayerState, bool>();
+    public Dictionary<PlayerStateMachine.EPlayerState, bool> transUpperPerm = new Dictionary<PlayerStateMachine.EPlayerState, bool>();
     public PlayerBaceState(PlayerStContext context, PlayerStateMachine.EPlayerState stateKey) : base(stateKey)
     {
         Context = context;
         InitPerm();
+        InitUpperPer();
     }
     protected void InitPerm()
     {
@@ -23,14 +26,25 @@ public abstract class PlayerBaceState : BaceState<PlayerStateMachine.EPlayerStat
         transPerm.Add(PlayerStateMachine.EPlayerState.Hitten, true);
         transPerm.Add(PlayerStateMachine.EPlayerState.Die, false);
     }
-    public void OverlapDamageArea(PlayerAttackData AttackData, BoxCollider refferBox){
+    protected void InitUpperPer()
+    {
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.Idle, false);
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.Walk, false);
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.Run, false);
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.AttackLight, false);
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.AttackHeavy, false);
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.Hitten, true);
+        transUpperPerm.Add(PlayerStateMachine.EPlayerState.Die, false);
+    }
+    public void OverlapDamageArea(PlayerAttackData AttackData, BoxCollider refferBox)
+    {
         Vector3 World = refferBox.transform.TransformPoint(refferBox.center);
         Debug.Log(World);
 
-        Vector3 Scale = refferBox.size /2;
+        Vector3 Scale = refferBox.size / 2;
 
         Collider[] hitColliders = Physics.OverlapBox(World,
-         Scale,Quaternion.identity, AttackData.enemyMask);
+         Scale, Quaternion.identity, AttackData.enemyMask);
 
         foreach (Collider enemy in hitColliders)
         {
@@ -105,10 +119,17 @@ public abstract class PlayerBaceState : BaceState<PlayerStateMachine.EPlayerStat
     }
     public PlayerStateMachine.EPlayerState PermCheck(PlayerStateMachine.EPlayerState tryState)
     {
-        if (transPerm[tryState])
+        if (Ended)
+        {
+            if (transPerm[tryState])
+            {
+                return tryState;
+            }
+        }else if (transUpperPerm[tryState])
         {
             return tryState;
         }
+        
         return StateKey;
     }
 }

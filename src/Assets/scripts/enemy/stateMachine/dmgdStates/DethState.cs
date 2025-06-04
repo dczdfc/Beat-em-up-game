@@ -13,8 +13,9 @@ public class DethState : EnemyBaceState
     }
     public override void EnterState(){
         Vector3 ForceVect = -Context.hitData.HitVector * Context.hitData.Power;
+        AudioManager.instance.PlaySoundFXClip(Context.bST.die, Context.Rb.position, 0.2f);
         if (ForceVect.x > 0) FlipCharL();
-        else if(ForceVect.x < 0) FlipCharR();
+        else if (ForceVect.x < 0) FlipCharR();
         
         Context.Rb.linearVelocity = Vector3.zero;
         Debug.Log("Enter DethState");

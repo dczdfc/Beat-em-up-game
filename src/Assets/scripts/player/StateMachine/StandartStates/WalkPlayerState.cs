@@ -15,11 +15,11 @@ public class WalkPlayerState : PlayerBaceState
     
     public override void EnterState(){
         Context.Anim.Play("Walk");
-        Debug.Log("Enter WalkState");
+        //Debug.Log("Enter WalkState");
         
     }
     public override void ExitState(){
-        Debug.Log("Exit WalkState");
+        //Debug.Log("Exit WalkState");
     }
     public override void UpdateState(){}
     public override void FixedUpdateState(){

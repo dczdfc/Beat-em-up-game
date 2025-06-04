@@ -11,11 +11,11 @@ public class RunPlayerState : PlayerBaceState
     }
     public override void EnterState(){
         Context.Anim.Play("Run");
-        Debug.Log("Enter RunState");
+        //Debug.Log("Enter RunState");
         
     }
     public override void ExitState(){
-        Debug.Log("Exit RunState");
+        //Debug.Log("Exit RunState");
     }
     public override void UpdateState(){}
     public override void FixedUpdateState(){

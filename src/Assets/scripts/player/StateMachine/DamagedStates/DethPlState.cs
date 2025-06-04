@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class DethPlState : PlayerBaceState
 {
-    private bool isEnded = false;
+
     public DethPlState(PlayerStContext context, PlayerStateMachine.EPlayerState estate)
      : base(context, estate)
     {
         Context = context;
         //InitPerm();
+        Ended = false;
 
 
 
@@ -18,12 +19,12 @@ public class DethPlState : PlayerBaceState
         else if(ForceVect.x < 0) FlipCharR();
         
         Context.Rb.linearVelocity = Vector3.zero;
-        Debug.Log("Enter DethState");
+        //Debug.Log("Enter DethState");
         Context.Anim.Play("deth");
         
     }
     public override void ExitState(){
-        Debug.Log("Exit DethState");
+        //Debug.Log("Exit DethState");
     }
     public override void UpdateState(){}
     public override void FixedUpdateState()
@@ -32,13 +33,13 @@ public class DethPlState : PlayerBaceState
         
         if (stateInfo.normalizedTime >= 0.9 && stateInfo.IsName("deth") )
         {
-            isEnded = true;
+            Ended = true;
         }
     }
     
     
     public override PlayerStateMachine.EPlayerState GetNextState(){
-        if (isEnded)
+        if (Ended)
         {
             Context.DieEvent.Invoke();
         }return StateKey;

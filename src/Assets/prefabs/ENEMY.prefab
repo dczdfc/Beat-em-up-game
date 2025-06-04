@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 1529998623351808341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.77, z: -0.95}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,7 +234,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -0.7}
 --- !u!114 &2419856488367648448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,12 +329,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 26fa53ce3737bb04b840e77e82ae4636, type: 3}
-  m_Color: {r: 0.42422283, g: 0.39999998, b: 1, a: 1}
+  m_Sprite: {fileID: 5058948802614682084, guid: c8283bf4628fca74cbbcd62f80c77376, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.08, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -414,7 +414,7 @@ Transform:
   m_GameObject: {fileID: 3806945154148677385}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -445,14 +445,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4379819541471741368}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6386207954504330475}
   m_Father: {fileID: 2620512058508460918}
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &7425632731297335487
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 5322879666690702948}
   - component: {fileID: 5789431835124287954}
   - component: {fileID: 3737753010165349902}
+  - component: {fileID: -3646563207601896358}
   m_Layer: 3
   m_Name: ENEMY
   m_TagString: Enemy
@@ -521,8 +522,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.950182, y: 3.9930964, z: 3.1250381}
-  m_Center: {x: 0.012464523, y: 0.45922947, z: 0.32393408}
+  m_Size: {x: 1.5, y: 4, z: 1.5}
+  m_Center: {x: 0, y: 0, z: -0.7}
 --- !u!114 &4714784271768622659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,8 +536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7fa2c9681205a4093968ffd7c8a5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHelth: 10
+  MaxHelth: 5
   CurrentHelth: 0
+  helthBar: {fileID: 0}
 --- !u!114 &5322879666690702948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +561,10 @@ MonoBehaviour:
   brains: {fileID: 3737753010165349902}
   attackLite: {fileID: 11400000, guid: 71a32be1cd16c6f4ebc1f67fd78ac642, type: 2}
   attackLiteArea: {fileID: 8216493969408930520}
+  basicSoundTest: {fileID: -3646563207601896358}
+  DestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &5789431835124287954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -601,7 +607,22 @@ MonoBehaviour:
   enemyStateMachine: {fileID: 5322879666690702948}
   plFounder: {fileID: 4723546906597474854}
   playerPos: {fileID: 0}
-  eBrainState: 0
+--- !u!114 &-3646563207601896358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7425632731297335487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00db3ce496c5f0540baacb3a58a99a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  die: {fileID: 8300000, guid: b328244a24c9ea04398b3b4418461631, type: 3}
+  Hitten: {fileID: 8300000, guid: ab89b135a66574c41bd6ac4698f0acf8, type: 3}
+  Attack1: {fileID: 0}
+  Attack2: {fileID: 0}
 --- !u!1 &7569258970543546297
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,5 +729,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Size: {x: 2.08, y: 1.1, z: 1.24}
   m_Center: {x: 0, y: 0, z: 0}
